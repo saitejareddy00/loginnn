@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>License Number Recognition</title>
+	 <style>
+		 
+h1{
+	text-align:  center;
+	font-size: 25px;
+	transition-duration: 0.7s;
+}
+h1:hover{
+	
+	letter-spacing: 3px;
+	transition-duration: 0.7s
+}
+input[type=text],input[type=password],select {
+          width: 90%;
+          padding: 12px 20px;
+          margin: 8px 0;
+		  background-color: white;
+          display: inline-block;
+          border:3px solid #1b1111;
+          border-radius: 9px;
+		  color: black;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+          width: 50%;
+          background-color:#43AD1B ;
+          color: white;
+          padding: 14px 20px;
+
+          border: none;
+          border-radius: 4px;
+		  cursor: pointer;
+		  transition-duration: 0.8s;
+        }
+        
+        input[type=submit]:hover {
+		  background-color:rgb(45, 207, 72);
+		  transition-duration: 0.8s;
+		  transform: scale(1.3);
+		         }
+        #desc{
+          width: 70%;
+          text-align: justify;
+          
+          padding:30px;
+          line-height: 1.8;
+          word-spacing: 5px;
+          font-size: 20px;
+          font-family:monospace; color:black;
+
+        }
+        #par1{
+          background-color:#12B903 ;
+          padding:20px
+        }
+        #par2{
+          padding:20px;
+          background-color: #DF2D06;
+        }
+#disp{
+	display: none;
+}
+
+ html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  height: 100%;
+
+  
+  
+}
+#menu1{
+	position: sticky; 
+	
+            top: 0; 
+            background-color: #12B903;
+            padding:4px 90px 4px 90px; 
+            color:#0175F2; 
+            margin: 0 auto; 
+			overflow: hidden;
+			border-radius: 10px;
+			transition-duration: 0.4s ;
+			box-shadow: 0 10px 35px rgb(0 0 0 / 30%)
+            
+ }
+
+#menu1 a{ 
+          float: left;
+        	color: whitesmoke; 
+            text-align: center; 
+			padding: 10px 10px;
+			word-spacing: 2px; 
+            text-decoration: none; 
+            font-size: 22px;
+			border-radius: 8px;
+            transition-duration: 0.4s;
+            font-family: sans-serif;
+
+}
+#menu1:hover{
+	
+	transition-duration: 0.4s;
+}
+#menu1 a:hover{
+	transition-duration: 0.4s;
+	background-color: #DF2D06;
+	color: whitesmoke;
+	transform: scale(1.2);
+}
+.menu2{ 
+          height: 90px;
+          max-width: 200px;
+            top: 0; 
+            background-color:#151D33 ;
+            padding:10px 40px 10px 40px; 
+            color:white; 
+            margin: 0 auto; 
+			overflow: hidden;
+			border-radius: 20px;
+			transition-duration: 0.4s ;
+}
+.menu2 a{ 
+            position: relative; 
+            color: #EFBB00; 
+            text-align: center; 
+            padding: 10px 20px 10px 20px; 
+            text-decoration: none; 
+			font-size:25px;
+			transition-duration: 0.8s;
+            font-family: sans-serif;
+
+}
+input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+.menu2 a:hover{
+	transition-duration: 0.8s;
+      text-shadow: -1px -1px 10px #EFBB00,1px 1px 10px #EFBB00;
+}
+#welcome{
+      font-family: monotype corsive;
+      text-align: justify;
+	  color: #6C757D;
+}
+#imp{
+ font-family: monotype corsive;
+      text-align: justify;
+      color: #003760;     
+}
+.ok {
+          width: 50%;
+          border-radius: 10px;
+          align-items: center;
+          background-color: #1E1E30;
+		  color:whitesmoke;
+		  padding: 20px 20px;
+          align-self: center;
+          text-align: start;
+          box-shadow: 0 10px 35px rgb(0 0 0 / 40%)
+        }
+		.rounded-image {
+    border-radius: 12px;
+}
+.slider {
+  height:550px;
+  max-width: 900px;
+  background-color: rgb(119, 121, 150);
+  border-radius: 50px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background-color: #EFBB00;
+  color: #333;
+  border: none; outline: none;
+  font-size: 20px;
+  display: flex; justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 0.5;
+}
+
+.prev { left: -10%; }
+.next { right: -10%; }
+
+.slides-container{align-items: center; justify-content: center; padding-top: 50px ;padding-bottom: 20px;  width: 100%; height: 100%; }
+
+.slide {
+  margin: 0%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border-radius: 50px;
+    align-items: center;
+  }
+  
+  .slide.active { display: flex; }
+  
+  .slide.active .col-left,
+  .slide.active .col-right {
+    animation: fade-in 0.8s 1;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0; transform: translateX(-20px);
+    }
+  
+    to {
+      opacity: 1; transform: translateX(0);
+    }
+  }
+  
+  .col-right { flex: 1; }
+  
+  .col-right img {
+    width: 90%;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+	border-radius: 50px;
+  }
+  #inp{
+    width:20%;
+    align-content: center;
+    align-items: center;
+  }
+	 </style>
+<script>
+	
+	var currentIndex = 0;
+function ne() {
+	const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const slides = document.querySelectorAll(".slide");
+
+
+  if (currentIndex == slides.length - 1) {
+    currentIndex = 0;
+    document.querySelector(".active").classList.remove("active");
+    slides[currentIndex].classList.add("active");
+    return;
+  }
+
+  if (currentIndex < slides.length) {
+    document.querySelector(".active").classList.remove("active");
+    currentIndex++;
+    slides[currentIndex].classList.add("active");
+  }
+};
+function pre() {
+	const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const slides = document.querySelectorAll(".slide");
+
+
+  if (currentIndex == 0) {
+    currentIndex = slides.length - 1;
+    document.querySelector(".active").classList.remove("active");
+    slides[currentIndex].classList.add("active");
+    return;
+  }
+
+  if (currentIndex < slides.length) {
+    document.querySelector(".active").classList.remove("active");
+    currentIndex--;
+    slides[currentIndex].classList.add("active");
+  }
+};
+</script>
+</head>
+<body>
+	<center><table  cellspacing="0" cellpadding="10" border="0">
+		<tr>
+		<td width="400px"><h2><font color="black" size="10%" ><center>License Number Recognition</center></font></h2></td>
+		<td width="400px">
+			<table border="0" >
+			<tr >
+			<td width="90px"><img src="https://static.mobileye.com/website/uk/fleets/images/sli_s1.jpg" width="180px" height="100px" class="rounded-image"></td>
+			<td width="90px"><img src="https://images.moneycontrol.com/static-mcnews/2019/11/Fastag-770x433.jpg" width="160px" height="100px" class="rounded-image"></td>
+			<td width="90px"><img src="https://www.acko.com/wp-content/uploads/2018/05/Know-about-speed-detection-device-on-road-and-how-they-are-preventing-accidents.-1024x592.jpg" width="180px" height="100px" class="rounded-image"></td>
+			
+				</tr>
+			</table>
+		</td>
+		<td><div class="menu2">
+			<a href="faq">Welcome</a>
+      <br>
+      <br>
+			
+			<a href="Contact">Contact Us</a>
+		</td>
+		</tr>
+	</table>
+	</center>
+	<div class="menu1"><center>
+		<table cellspacing="10" cellpadding="5" border="0" id="menu1">
+			<tr >
+				<td><a href="HOME">Home</a></td>
+		 
+		<td><a href="ABOUTUS">About us</a></td>
+		<td><a href="REGISTER">register</a> </td>
+		<td><a href="RECOGNIZE">Recognize-number-plate</a></td>
+		<td><a href="LOGIN">login</a></td>
+		<td><a href="gallary">gallary</a></td>
+		<td></table></center>
+	</div>
+	<br>
+	{% block content%}
+	{% endblock %}
+	<br> 
+	<center>
+		<div class="slider">
+			<button class="prev" onclick="ne()">&#8592</button>
+			<button class="next" onclick="pre()">&#8594</button>
+			<div class="slides-container">
+			  <div class="slide active">
+				<div class="col-right">
+					<img src="https://www.spireon.com/wp-content/uploads/car-theft-800x450.jpg" height="450px" >
+				</div>
+			  </div>
+			  <div class="slide">
+				<div class="col-right">
+					<img src="https://www.asmag.com/upload/pic/case/74012.5185081.jpg" height="450px" >
+				</div>
+			  </div>
+			  <div class="slide">
+				<div class="col-right">
+					<img src="https://www.traffictechnologytoday.com/wp-content/uploads/2019/01/4.-GHSA-speeding-report-fatality-risk-infographic.jpg" height="450px">
+				</div>
+			  </div>
+	</div>
+	</div>
+  <br>
+  <div id="desc">
+    <p id="par1">License Plate Recognition is a computer system that recognizes any digital image automatically on the number plate.<br></p>
+     <p id="par2">This technology is used in various security and traffic applications.     <br></p>
+     <p id="par1">The objective is to design an efficient automatic authorized vehicle identification system by using the vehicle number plate.     <br>
+     Vehicle number plate region is extracted using the image segmentation in an image.     <br></p>
+     <p id="par2">Many applications can be implemented by using this system, such as security, highway speed detection, violation of light,  identification of handwritten text, discovery of stolen cars, automatic fee collection systems.      <br></p>
+    
+  </div>
+</center>
+
+			
+	
+</body>
+</html>
