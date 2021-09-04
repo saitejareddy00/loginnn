@@ -45,7 +45,7 @@ input[type=text],input[type=password],select {
 		  transform: scale(1.3);
 		         }
         #desc{
-          width: 70%;
+          width: 90%;
           text-align: justify;
           
           padding:30px;
@@ -73,19 +73,18 @@ input[type=text],input[type=password],select {
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
-  height: 100%;
+  padding:40px;
 
   
   
 }
 #menu1{
-	position: sticky; 
-	
+ 
+	margin: 20px;
             top: 0; 
             background-color: #12B903;
             padding:4px 90px 4px 90px; 
             color:#0175F2; 
-            margin: 0 auto; 
 			overflow: hidden;
 			border-radius: 10px;
 			transition-duration: 0.4s ;
@@ -180,13 +179,14 @@ input[type=file]::file-selector-button:hover {
     border-radius: 12px;
 }
 .slider {
-  height:550px;
+  height: 550px;
   max-width: 900px;
   background-color: rgb(119, 121, 150);
   border-radius: 50px;
   position: relative;
   justify-content: center;
   align-items: center;
+  margin: 50PX;
 }
 
 .prev,
@@ -216,7 +216,7 @@ input[type=file]::file-selector-button:hover {
 .slides-container{align-items: center; justify-content: center; padding-top: 50px ;padding-bottom: 20px;  width: 100%; height: 100%; }
 
 .slide {
-  margin: 0%;
+  
     align-items: center;
     justify-content: center;
     display: none;
@@ -311,12 +311,12 @@ const slides = document.querySelectorAll(".slide");
 				</tr>
 			</table>
 		</td>
-		<td><div class="menu2">
-			<a href="faq">Welcome</a>
-      <br>
-      <br>
+		<td><div class="menu2" >
+      <table cellspacing="5px" bprder="2">
+			<tr><td><a href="faq">Welcome</a></td></tr>
 			
-			<a href="Contact">Contact Us</a>
+			<tr><td><a href="Contact">Contact-Us</a></td></tr>
+      </table>
 		</td>
 		</tr>
 	</table>
@@ -330,11 +330,11 @@ const slides = document.querySelectorAll(".slide");
 		<td><a href="REGISTER">register</a> </td>
 		<td><a href="RECOGNIZE">Recognize-number-plate</a></td>
 		<td><a href="LOGIN">login</a></td>
-		<td><a href="gallary">gallary</a></td>
-		<td></table></center>
+		<td><a href="gallary">gallary</a></td></table></center>
 	</div>
-	<br>
-	<br> 
+
+	{% block content%}
+	{% endblock %}
 	<center>
 		<div class="slider">
 			<button class="prev" onclick="ne()">&#8592</button>
