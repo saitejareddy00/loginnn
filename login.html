@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <style> 
+                body{
+
+                    background-image: linear-gradient(90deg, rgba(174, 203, 54, 0.6) 0%, rgba(242, 245, 246, 0.17) 50%, rgba(174, 203, 54, 0.61) 100%);
+                }
+                .maindiv{
+                    position: relative;
+                    width: 20%;
+                    min-width: 580px;
+                    min-height: 640px;
+                    height: 40%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 10%;
+                    padding: 3%;
+                    box-shadow: 1px 1px 20px  #454939;
+
+                }
+                .innerdiv{
+                    position:absolute;
+                    min-width: 270px;
+                    min-height: 320px;
+                    left: 50%;
+                    top: 50%;
+                    background-image: linear-gradient(white,#aecb36);
+                    transform: translate(-50%, -50%);
+                    padding: 15%;
+                    border-radius: inherit;
+                    box-shadow: 1px 1px 40px  #888888;
+                }
+                #mail,#pass{
+                    width:100%;
+                    padding: 12px 20px;
+                    background-color: white;
+                    display: inline-block;
+                    border:3px solid #f8f8f8;
+                    border-radius: 9px;
+                    color: black;
+                    box-sizing: border-box;box-shadow: -20px black;
+                            }
+                #subbut{
+                    position: absolute;
+                    width: 20%;
+                    background-color:#348815 ;
+                    color: white;
+                    padding: 14px 20px;
+                    right:21%;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition-duration: 0.3s;
+                }
+                #forgot{
+                    position: absolute;
+                    left:21%;
+                    top:71%;
+                    background-color: transparent;
+                    border: 0px;
+                    color:#77867b;
+                    transition-duration: 0.3s;
+                }
+                #forgot:hover{
+                    position: absolute;
+                    left:21%;
+                    top:71%;
+                    background-color: transparent;
+                    border: 0px;
+                    color:rgb(18, 56, 223);
+                    text-decoration: underline;
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    transition-duration: 0.3s;
+                }
+                input[type=submit]:hover {
+                    background-color:rgb(45, 207, 72);
+                    color:white;
+                    transition-duration: 0.3s;
+                    transform: scale(1.1);
+                    border-radius: 4px;
+		         }
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <div class="maindiv">
+            <div class="innerdiv">
+                <img src="https://sureify.com/wp-content/uploads/2021/06/sureify-logo.png"><br><br>
+                <form id="login" method="post">
+                    <input type="mail" id="mail" placeholder="your mail here"><br><br>
+                    <input type="password" id="pass" placeholder="********"><br><br>
+                    <input type="button" value="Forgot password?" id="forgot"><input type="submit" id="subbut" value="Login">
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
